@@ -12,6 +12,10 @@
 <meta property="og:description" content="<%= course.description %>">
 <meta property="og:image" content="<%= course.image %>">
 <meta property="og:url" content="<%= url %>">
+<meta property="og:image:width" content="1200">
+<meta property="og:startdate" content="startdate">
+<meta property="og:enddate" content="enddate">
+<meta property="og:number" content="number30">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="OG Courses Demo">
 
@@ -31,6 +35,9 @@
 <main style="max-width:720px;margin:40px auto;font-family:system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;">
 <h1><%= course.title %></h1>
 <p><%= course.description %></p>
+<p><%= course.number30 %></p>
+<p><%= course.startdate %></p>
+<p><%= course.enddate %></p>
 <img src="<%= course.image %>" alt="<%= course.title %>" style="max-width:100%;height:auto;border-radius:12px;">
 <p>Share this page: <code><%= url %></code></p>
 <p>
