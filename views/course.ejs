@@ -8,13 +8,13 @@
 
 <!-- Essential Open Graph tags -->
 <meta property="og:title" content="<%= course.title %>">
-<meta property="og:description" content="Course Number: <%= course.number %>&#10;Start: <%= course.startdate %>&#10;End: <%= course.enddate %>&#10;<%= course.description %>">
+<meta property="og:description" content="Course Number: <%= course.number %> | Start: <%= course.startdate %> | End: <%= course.enddate %> | <%= course.description %>">
 <meta property="og:image" content="<%= course.image %>">
 <meta property="og:url" content="<%= url %>">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="OG Courses Demo">
 
-<!-- Twitter Card (optional but recommended) -->
+<!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="<%= course.title %>">
 <meta name="twitter:description" content="Course Number: <%= course.number %> | Start: <%= course.startdate %> | End: <%= course.enddate %> | <%= course.description %>">
@@ -24,14 +24,16 @@
 <meta name="description" content="<%= course.description %>">
 <link rel="canonical" href="<%= url %>">
 </head>
+
 <body>
 <main style="max-width:720px;margin:40px auto;font-family:system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;">
   <h1><%= course.title %></h1>
-  <p>Course Number: <%= course.number %></p>
-  <p>Start Date: <%= course.startdate %></p>
-  <p>End Date: <%= course.enddate %></p>
+  <p><strong>Course Number:</strong> <%= course.number %></p>
+  <p><strong>Start Date:</strong> <%= course.startdate %></p>
+  <p><strong>End Date:</strong> <%= course.enddate %></p>
   <p><%= course.description %></p>
   <img src="<%= course.image %>" alt="<%= course.title %>" style="max-width:100%;height:auto;border-radius:12px;">
+
   <p>Share this page: <code><%= url %></code></p>
   <p>
     <button
@@ -46,7 +48,7 @@
     </button>
     <button
       onclick="navigator.clipboard.writeText(
-        `Course: <%= course.title %>\nCourse Number: <%= course.number %>\nStart Date: <%= course.startdate %>\nEnd Date: <%= course.enddate %>\nDescription: <%= course.description %>\nRegister: <%= url %>` 
+        `Course: <%= course.title %>\nNumber: <%= course.number %>\nStart: <%= course.startdate %>\nEnd: <%= course.enddate %>\nDescription: <%= course.description %>\nRegister: <%= url %>`
       ); alert('Course info copied! Paste it in your LinkedIn post.')"
       style="padding:10px 20px;margin-left:10px;background:#444;color:#fff;border:none;border-radius:6px;cursor:pointer;"
     >
