@@ -1,4 +1,4 @@
-<!doctype html>
+<!-- <!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -33,6 +33,28 @@
 <p><%= course.description %></p>
 <img src="<%= course.image %>" alt="<%= course.title %>" style="max-width:100%;height:auto;border-radius:12px;">
 <p>Share this page: <code><%= url %></code></p>
+<p>
+  <button
+    onclick="window.open(
+      'https://www.linkedin.com/sharing/share-offsite/?url=<%= encodeURIComponent(url) %>',
+      '_blank',
+      'width=600,height=600'
+    )"
+    style="padding:10px 20px;background:#0077b5;color:#fff;border:none;border-radius:6px;cursor:pointer;"
+  >
+    Share on LinkedIn
+  </button>
+  <button
+    onclick="navigator.clipboard.writeText(
+      `Course: <%= course.title %>\nDescription: <%= course.description %>\nRegister: <%= url %>`
+    ); alert('Course info copied! Paste it in your LinkedIn post.')"
+    style="padding:10px 20px;margin-left:10px;background:#444;color:#fff;border:none;border-radius:6px;cursor:pointer;"
+  >
+    Copy Info for LinkedIn
+  </button>
+</p>
 </main>
 </body>
-</html>
+</html> -->
+
+
