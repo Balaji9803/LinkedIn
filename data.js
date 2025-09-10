@@ -27,4 +27,3 @@ const courses = [
 
 export default courses;
 
-<meta property="og:description" content="Course Number: <%= course.number %>. Start: <%= course.startdate %>. End: <%= course.enddate %>. <%= course.description %>"></meta>
