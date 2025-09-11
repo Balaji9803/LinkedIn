@@ -6,10 +6,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title><%= course.title %></title>
 
+
 <!-- Essential Open Graph tags -->
 <meta property="og:title" content="<%= course.title %> | <%= course.number %> | <%= course.startdate %> – <%= course.enddate %>">
 <meta property="og:description" content="Course Number: <%= course.number %> | Start: <%= course.startdate %> | End: <%= course.enddate %> | <%= course.description %>">
 <meta property="og:image" content="<%= course.image %>">
+<meta property="og:startdate" content="<%= course.startdate %>">
+<meta property="og:enddate" content="<%= course.enddate %>">
+<meta property="og:number" content="<%= course.number %>">
 <meta property="og:url" content="<%= url %>">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="OG Courses Demo">
