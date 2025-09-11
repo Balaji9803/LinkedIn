@@ -8,8 +8,23 @@
 
 
 <!-- Essential Open Graph tags -->
-<meta property="og:title" content="<%= course.title %> | <%= course.number %> | <%= course.startdate %> – <%= course.enddate %>">
-<meta property="og:description" content="Course Number: <%= course.number %> | Start: <%= course.startdate %> | End: <%= course.enddate %> | <%= course.description %>">
+<meta property="og:title" content="<%= course.title %>&#10;
+number: <%= course.number %>&#10;
+startdate: <%= course.startdate %>&#10;
+enddate: <%= course.enddate %>&#10;
+city: <%= course.city %>&#10;
+state: <%= course.state %>&#10;
+colony: <%= course.colony %>&#10;
+country: <%= course.country %>&#10;
+address: <%= course.address %>">
+
+<meta property="og.city" content="<%= course.city %>">
+<meta property="og.state" content="<%= course.state %>">
+<meta property="og.colony" content="<%= course.colony %>">
+<meta property="og.country" content="<%= course.country %>">
+<meta property="og.address" content="<%= course.address %>">
+
+
 <meta property="og:image" content="<%= course.image %>">
 <meta property="og:startdate" content="<%= course.startdate %>">
 <meta property="og:enddate" content="<%= course.enddate %>">
